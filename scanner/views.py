@@ -2,7 +2,12 @@ from django.http import FileResponse
 from .models import ScanResult
 from .utils import generate_pdf
 import os
-
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from .models import ScanResult
+@login_required
+def index(request):
+    return render(request, 'index.html')
 def download_report(request):
     user = request.user
     scans = ScanResult.objects.filter(user=user)

@@ -14,8 +14,9 @@ function startScan() {
     consoleBox.innerHTML = "> Connecting...\n";
     resultsDiv.innerHTML = "";
     bar.style.width = "0%";
+    let protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
 
-    socket = new WebSocket("ws://127.0.0.1:8000/ws/scan/");
+    socket = new WebSocket(protocol + window.location.host + "/ws/scan/");
 
     socket.onopen = function () {
         consoleBox.innerHTML += "> Connected\n";
