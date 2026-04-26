@@ -20,11 +20,9 @@ INSTALLED_APPS = [
 
 ASGI_APPLICATION = 'portscanner.asgi.application'
 
-# ✅ Static files
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# ✅ Templates (FIXED PROPERLY)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

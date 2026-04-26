@@ -16,7 +16,10 @@
 
     <nav>
         <a href="/">Scan</a>
-        <a href="/logout/">Logout</a>
+        <form method="POST" action="/logout/" style="display:inline;">
+           {% csrf_token %}
+           <button type="submit">Logout</button>
+        </form>
         <a href="/history/">History</a>
     </nav>
 
