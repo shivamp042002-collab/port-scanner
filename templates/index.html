@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="input-box">
+
+    <input id="target" placeholder="Target (IP / Domain)">
+    <input id="start_port" placeholder="Start Port">
+    <input id="end_port" placeholder="End Port">
+
+    <select id="scan_type">
+        <option value="custom">Custom Scan</option>
+        <option value="quick">Quick Scan (Top 100)</option>
+        <option value="full">Full Scan (All Ports)</option>
+        <option value="stealth">Stealth Scan</option>
+    </select>
+
+    <button onclick="startScan()">EXECUTE</button>
+
+</div>
+
+<div id="console"></div>
+
+<div class="progress">
+    <div id="bar"></div>
+</div>
+
+<div id="results"></div>
+
+{% endblock %}
