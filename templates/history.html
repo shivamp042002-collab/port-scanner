@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Scan History</h2>
+
+<table>
+<tr>
+    <th>Target</th>
+    <th>Port</th>
+    <th>Service</th>
+    <th>Status</th>
+    <th>Time</th>
+</tr>
+
+{% for scan in scans %}
+<tr>
+    <td>{{ scan.target }}</td>
+    <td>{{ scan.port }}</td>
+    <td>{{ scan.service }}</td>
+    <td>{{ scan.status }}</td>
+    <td>{{ scan.timestamp }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}
