@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Consolas, monospace;
+    background: url("https://images4.alphacoders.com/135/thumb-1920-1358905.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #00ff99;
+}
+
+/* Dark overlay for hacker effect */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    z-index: -1;
+}
+
+/* Main terminal container */
+.terminal {
+    width: 95%;
+    margin: 30px auto;
+    padding: 30px;
+    border: 2px solid #00ff99;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 25px #00ff99;
+}
+
+/* Heading */
+h1 {
+    font-size: 42px;
+    text-align: center;
+    color: #00ff99;
+    text-shadow: 0 0 20px #00ff99;
+    margin-bottom: 30px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Scan History + Logout box style */
+nav a,
+nav button {
+    padding: 10px 20px;
+    border: 1px solid #00ff99;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff99;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+/* Hover effect */
+nav a:hover,
+nav button:hover {
+    background: #00ff99;
+    color: black;
+    box-shadow: 0 0 20px #00ff99;
+}
+
+/* Form input area */
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+input,
+select {
+    width: 220px;
+    padding: 14px;
+    border: 1px solid #00ff99;
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ff99;
+    font-size: 16px;
+    outline: none;
+    border-radius: 8px;
+}
+
+/* Buttons */
+button {
+    padding: 14px 25px;
+    background: transparent;
+    border: 1px solid #00ff99;
+    color: #00ff99;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00ff99;
+    color: black;
+    box-shadow: 0 0 20px #00ff99;
+}
+
+/* Console output */
+#console {
+    min-height: 400px;
+    padding: 20px;
+    border: 1px solid #00ff99;
+    background: rgba(0, 0, 0, 0.95);
+    color: #00ff99;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(0, 255, 153, 0.2);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Progress bar */
+.progress {
+    margin-top: 20px;
+    width: 100%;
+    height: 18px;
+    border: 1px solid #00ff99;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#bar {
+    width: 0%;
+    height: 100%;
+    background: #00ff99;
+    box-shadow: 0 0 15px #00ff99;
+    transition: 0.4s;
+}
+
+/* History table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #00ff99;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background: rgba(0, 255, 153, 0.15);
+}

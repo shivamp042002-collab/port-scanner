@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -10,22 +11,27 @@
 
     <select id="scan_type">
         <option value="custom">Custom Scan</option>
-        <option value="quick">Quick Scan (Top 100)</option>
-        <option value="full">Full Scan (All Ports)</option>
+        <option value="quick">Quick Scan</option>
+        <option value="full">Full Scan</option>
         <option value="stealth">Stealth Scan</option>
     </select>
 
-    <button onclick="startScan()">EXECUTE</button>
-    <a href="/download/">Download Report</a>
+    <button onclick="startScan()">⚡ EXECUTE</button>
+
+    <a href="/download/" style="color:#00ff99;">
+        Download Report
+    </a>
 
 </div>
-
-<div id="console"></div>
 
 <div class="progress">
     <div id="bar"></div>
 </div>
 
-<div id="results"></div>
+<br>
+
+<div id="console">
+> System Ready and Waiting for Your Command .....
+</div>
 
 {% endblock %}

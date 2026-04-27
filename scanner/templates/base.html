@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Port Scanner</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="terminal">
+
+    <h1>⚡ CYBER PORT SCANNER</h1>
+
+    <nav>
+        <a href="/">Scan</a>
+        <a href="/history/">History</a>
+
+        <form method="POST" action="/logout/" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+</div>
+
+<script src="{% static 'js/main.js' %}"></script>
+<footer class="footer">
+    <p>© 2026 All Rights Reserved | Designed & Developed by <strong>Shivam Pandey</strong></p>
+</footer>
+</body>
+</html>
